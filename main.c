@@ -4,13 +4,13 @@
 #include <math.h>
 #include <assert.h>
 
-const int INF_ROOTS = (-10);                       // инициализация констант, используемых в программе
+const int INF_ROOTS = (-10);                       
 
 const int NO_ROOTS = (-100);
 
 const double EPS = 0.0000001;
 
-int SolveSquare(double, double, double, double*, double*);         // инициализация всех функций, используемых в программе
+int SolveSquare(double, double, double, double*, double*);        
 
 void test_square();
 
@@ -18,7 +18,7 @@ void input(double*, double*, double*);
 
 int cmp_with_0(double);
 
-int main()                                                        // тело программы поделено на несколько функций
+int main()                                                       
 {
     double a = 0, b = 0, c = 0;
 
@@ -35,7 +35,7 @@ int main()                                                        // тело програ
     }
     if (nRoots == 2)
     {
-        printf("\n 2 Roots\n %lg, %lg", x1, x2);                   // switch заменить и написать отдельную функцию
+        printf("\n 2 Roots\n %lg, %lg", x1, x2);                  
     }
     if (nRoots == 0)
     {
@@ -49,7 +49,7 @@ int main()                                                        // тело програ
 }
 
 //----------------------------------------------------------------
-//!  Function solves square equation (a) * x^2 + (b) * x + (c) = 0           // для работы с программой doxyden
+//!  Function solves square equation (a) * x^2 + (b) * x + (c) = 0           // doxyden
 //!  @param_in a - coefficient
 //!  @param_in b - coefficient
 //!  @param_in c - coefficient
@@ -181,7 +181,7 @@ void test_square()                                             // Unittests for 
     }
 }
 
-void input(double* a, double* b, double* c)                    // функция для ввода коэффициентов
+void input(double* a, double* b, double* c)                   
 {
     printf(" a = ");
     scanf("%lg", a);
@@ -197,6 +197,6 @@ void input(double* a, double* b, double* c)                    // функция для вв
 
 int cmp_with_0(double a)
 {
-    return (fabs(a - 0) < EPS);   // функция решает проблему с погрешностью: число по модулю сравнивается
-}                                 // число сравнивается с константой EPS = 10^(-6)
-                                  //(возникновение числа -0 как очень маленького отрицательного числа)
+    return (fabs(a - 0) < EPS);   
+}                                 
+                                
